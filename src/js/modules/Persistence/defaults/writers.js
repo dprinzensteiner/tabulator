@@ -3,6 +3,9 @@ export default {
 	local:function(id, type, data){
 		localStorage.setItem(id + "-" + type, JSON.stringify(data));
 	},
+	session:function(id, type, data){
+		sessionStorage.setItem(id + "-" + type, JSON.stringify(data));
+	},
 	cookie:function(id, type, data){
 		var expireDate = new Date();
 
